@@ -124,7 +124,7 @@
               <input type="text" class="hidden" name="product_id" value='{{$products->id}}'>
               <input type="text" class="hidden" name="product_name" value="{{$products->product_name}}">
               <input type="text" class="hidden" name="product_price" value="{{$products->price}}">
-              <input type="text" class="hidden" name="product_description" value="{{$products->product_description}}">
+             
                 @endunless
          <!-- Product Description tab & comments-->
 
