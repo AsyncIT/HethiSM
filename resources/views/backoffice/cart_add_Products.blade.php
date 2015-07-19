@@ -86,29 +86,36 @@
 
                             </ul>
                         </div>
-                        {!! Form::open(['url' =>'view']) !!}
+                        {!! Form::open(['url' =>'view', 'files'=>true]) !!}
                         <div class="panel-body p20 pb10">
                             <div class="tab-content pn br-n admin-form">
                             <div id="tab1_1" class="tab-pane active">
 
                                 <div class="section row mbn">
                                     <div class="col-md-4">
-                                            <div clas s="fileupload fileupload-new admin-form" data-provides="fileupload">
-                                                <div class="fileupload-preview thumbnail mb20">
-                                                    <img id="name1" name="image1" data-src="holder.js/100%x140" alt="holder">
+                                        {{--image start--}}
+                                        {!! Form::label('Image 1','image1') !!}
+                                        <div class="fileupload fileupload-new admin-form" data-provides="fileupload">
+                                            <div class="fileupload-preview thumbnail mb20">
+                                                <img data-src="holder.js/100%x140" alt="holder">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-7 pr5">
+                                                    <input type="text" name="image1" id="image1" class="text-center event-name gui-input br-light bg-light" placeholder="Img Keywords">
+                                                    <label for="name2" class="field-icon"></label>
                                                 </div>
-
-                                                <div class="row">
-
-                                                    <div class="col-xs-5">
+                                                <div class="col-xs-5">
                                                         <span class="button btn-system btn-file btn-block">
-                                                            <span class="fileupload-new">Select</span>
-                                                        <span class="fileupload-exists">Change</span>
-                                                        <input type="file">
+                                                            Select
+                                                            {!! Form::file('file', null) !!}
+                                                            {{--<span class="fileupload-new">Select</span>--}}
+                                                            {{--<span class="fileupload-exists">Change</span>--}}
+                                                            <input type="file">
                                                         </span>
-                                                    </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        {{--image end--}}
                                         </div>
                                         <div class="col-md-8 pl15">
                                             <div class="section mb10">

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Rubi Cart</title>
+    <title>Herthi Super Market</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link href="http://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -25,15 +26,45 @@
 <body>
 <!-- Header Start -->
 <header>
-@yield('topnav')
-    <div class="container">
-        @yield('middlenav')
-        @yield('mainnav')
 
+    @include('Pages.template.topnav')
+
+    <div class="container">
+
+        @include('Pages.template.middlenav')
+        @include('Pages.template.mainnav')
 
     </div>
 </header>
 <!-- Header End -->
 
+<div id="maincontainer">
+
+    @yield('content_section')
+
+</div>
+<!-- /maincontainer -->
+
+<!-- Footer -->
+@include('Pages.template.basefooter')
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/respond.min.js"></script>
+<script src="js/application.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script defer src="js/jquery.fancybox.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jquery.tweet.js"></script>
+<script  src="js/cloud-zoom.1.0.2.js"></script>
+<script  type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript"  src="js/jquery.carouFredSel-6.1.0-packed.js"></script>
+<script type="text/javascript"  src="js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript"  src="js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript"  src="js/jquery.ba-throttle-debounce.min.js"></script>
+<script defer src="js/custom.js"></script>
 </body>
 </html>
+
