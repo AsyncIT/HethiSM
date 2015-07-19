@@ -51,55 +51,9 @@
         <!-- Account Login-->
         <div class="span9">
           <h1 class="heading1"><span class="maintext">Checkout</span><span class="subtext"> Checkout Process Steps</span></h1>
-          <div class="checkoutsteptitle">Step 1: Checkout Options<a class="modify">Modify</a>
-          </div>
 
-          @if (\Auth::guest())
-          <div class="checkoutstep ">
-            <section class="newcustomer ">
-              <h3 class="heading3">New Customer </h3>
-              <div class="loginbox">
-                <label class="inline">
-                  <input type="radio" value="option1">
-                  Register Account </label>
-                <br>
-                <label class="inline">
-                  <input type="radio" value="option1">
-                  Guest Checkout </label>
-                <p><br>
-                  By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
-                <br>
-                <a href="#" class="btn btn-orange">Continue</a>
-              </div>
-            </section>
-            <section class="returncustomer">
-              <h3 class="heading3">Returning Customer </h3>
-              <div class="loginbox">
-                <form class="form-vertical">
-                  <fieldset>
-                    <div class="control-group">
-                      <label class="control-label">E-Mail Address:</label>
-                      <div class="controls">
-                        <input type="text" class="span3">
-                      </div>
-                    </div>
-                    <div class="control-group">
-                      <label class="control-label">Password:</label>
-                      <div class="controls">
-                        <input type="text"  class="span3">
-                      </div>
-                    </div>
-                    <a class="" href="#">Forgotten Password</a>
-                    <br>
-                    <br>
-                    <a href="#" class="btn btn-orange">Login</a>
-                  </fieldset>
-                </form>
-              </div>
-            </section>
-          </div>
-          @endif
-          <div class="checkoutsteptitle">Step 2: Billing Details<a class="modify">Modify</a>
+
+          <div class="checkoutsteptitle">Step 1: Billing Details<a class="modify">Modify</a>
           </div>
           <div class="checkoutstep">
             <div class="row">
@@ -222,7 +176,7 @@
             </div>
             <a class="btn btn-orange pull-right">Continue</a>
           </div>
-          <div class="checkoutsteptitle">Step 3: Delivery Details<a class="modify">Modify</a>
+          <div class="checkoutsteptitle">Step 2: Delivery Details<a class="modify">Modify</a>
           </div>
           <div class="checkoutstep">
             <div class="row">
@@ -345,7 +299,7 @@
             </div>
             <a class="btn btn-orange pull-right">Continue</a>
           </div>
-          <div class="checkoutsteptitle">Step 4: Delivery Method<a class="modify">Modify</a>
+          <div class="checkoutsteptitle">Step 3: Delivery Method<a class="modify">Modify</a>
           </div>
           <div class="checkoutstep">
             <p>Please select the preferred shipping method to use on this order..</p>
@@ -356,7 +310,7 @@
             <br>
             <a class="btn btn-orange pull-right">Continue</a>
           </div>
-          <div class="checkoutsteptitle">Step 5: Payment  Method<a class="modify">Modify</a>
+          <div class="checkoutsteptitle">Step 4: Payment  Method<a class="modify">Modify</a>
           </div>
           <div class="checkoutstep">
             <p>Please select the preferred payment method to use on this order.</p>
@@ -371,7 +325,7 @@
               </div>
             </div>
           </div>
-          <div class="checkoutsteptitle">Step 6: Confirm Order<a class="modify">Modify</a>
+          <div class="checkoutsteptitle">Step 5: Confirm Order<a class="modify">Modify</a>
           </div>
           <div class="checkoutstep">
             <div class="cart-info">
