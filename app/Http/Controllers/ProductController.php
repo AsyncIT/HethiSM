@@ -8,6 +8,7 @@ use App\customer_item;
 use App\product;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductRequest;
 use Request;
 
 
@@ -32,10 +33,10 @@ class ProductController extends Controller
         return view('Pages.view',compact('products'));
     }
 
-    public  function store()
+    public  function store(ProductRequest $request)
     {
-        $input = Request::all();
-        product::create($input);
+        $request->file('file')->move(__DIR__.'./../../../resources/product_image/',$request->file('file')->getClientOriginalName());
+        product::create($request->all());
         return redirect('add-product');
     }
 
