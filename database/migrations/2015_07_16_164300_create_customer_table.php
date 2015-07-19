@@ -14,6 +14,7 @@ class CreateCustomerTable extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('user_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('telephone');
@@ -25,8 +26,6 @@ class CreateCustomerTable extends Migration
             $table->string('country');
             $table->string('region');
             $table->string('user_image');
-            $table->string('email')->unique();
-            $table->string('password', 60);
 
             $table->rememberToken();
             $table->timestamps();
