@@ -58,6 +58,7 @@
              <th class="total">Action</th>
 
           </tr>
+
             @foreach($shoppingCarts as $items)
           <tr>
 
@@ -81,24 +82,14 @@
           <div class="span4 pull-right">
             <table class="table table-striped table-bordered ">
               <tr>
-                <td><span class="extra bold">Sub-Total :</span></td>
-                <td><span class="bold">$101.0</span></td>
-              </tr>
-              <tr>
-                <td><span class="extra bold">Eco Tax (-5.00) :</span></td>
-                <td><span class="bold">$11.0</span></td>
-              </tr>
-              <tr>
-                <td><span class="extra bold">VAT (18.2%) :</span></td>
-                <td><span class="bold">$21.0</span></td>
-              </tr>
+
               <tr>
                 <td><span class="extra bold totalamout">Total :</span></td>
                 <td><span class="bold totalamout">$150.28</span></td>
               </tr>
             </table>
-            <input type="submit" value="CheckOut" class="btn btn-orange pull-right">
-            <input type="submit" value="Continue Shopping" class="btn btn-orange pull-right mr10">
+            <a href="{{url('checkout')}}"> <input type="submit" value="Check Out" class="btn btn-orange pull-right"> </a>
+            <a href="{{url('/')}}"> <input type="submit" value="Continue Shopping" class="btn btn-orange pull-right mr10"> </a>
           </div>
         </div>
         </div>

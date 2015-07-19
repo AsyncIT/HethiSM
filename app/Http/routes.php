@@ -51,6 +51,7 @@ Route::get('/','ProductController@index');
 Route::post('view','ProductController@store');
 Route::get('cart','ProductController@cart');
 Route::post('AddToCart','ProductController@AddToCart');
+Route::post('paid','ProductController@getUserDetails');
 Route::get('checkout','ProductController@checkout');
 Route::get('view/{id}','ProductController@show');
 

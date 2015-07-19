@@ -8,6 +8,7 @@ use App\customer_item;
 use App\product;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\User;
 use Request;
 
 
@@ -84,7 +85,26 @@ class ProductController extends Controller
 
     public function checkout()
     {
-        return view('Pages.checkout');
+
+        if (\Auth::guest())
+        {
+            return redirect('auth/login');
+        }
+
+        $shoppingCarts =customer_item::where('customer_id', '=', \Auth::user()->id)->get(); // get all selected shopping cart product from customer_items table
+
+
+        $users = User::get();
+
+        return view('Pages.checkout',compact('users','shoppingCarts'));
+    }
+
+    public function getUserDetails()
+    {
+
+        $user = User::findorFail(\Auth::user()->id);
+        $user->update->all();
+
     }
 
 }
