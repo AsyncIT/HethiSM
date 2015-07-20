@@ -103,6 +103,7 @@
                 <div class="productpageprice">
                   <span class="spiral"></span>{{$products->price}}€</div>
                 <div class="productpageoldprice">{{$products->promo_price}}€</div>
+
                 <ul class="rate">
                   <li class="on"></li>
                   <li class="on"></li>
@@ -110,12 +111,16 @@
                   <li class="on"></li>
                   <li class="off"></li>
                 </ul>
+
+                Quantity :
+
+                <input type="number" min="1"  name="product_qty" value="1">
               </div>
 
 
               <p><h3>{{$products->product_description}}</h3></p>
               <ul class="productpagecart">
-                {!! Form::submit('Add Article', ['class' => 'btn btn-orange']) !!}
+                {!! Form::submit('Add To Cart', ['class' => 'btn btn-orange']) !!}
               </ul>
 
               @unless (\Auth::guest())

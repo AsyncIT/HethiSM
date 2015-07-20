@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\category;
 use App\customer;
 use App\customer_item;
 use App\product;
@@ -10,6 +11,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\User;
 use Request;
+
 
 
 class ProductController extends Controller
@@ -42,15 +44,23 @@ class ProductController extends Controller
 
 
 
-    public function category()
+    public function categorywise($id)
     {
-        $products = product::get(); // get all product
-
-        return view('Pages.products',compact('products')); // return products to index page
+        $products = product::where('product_category', '=', $id)->get(); // get all product
+        $category = category::get();
+        return view('Pages.products',compact('products','category')); // return products to index page
 
     }
 
 
+
+    public function allcategory()
+    {
+        $products = product::get(); // get all product
+        $category = category::get();
+        return view('Pages.products',compact('products','category')); // return products to index page
+
+    }
 
     public function cart()
     {
@@ -106,5 +116,30 @@ class ProductController extends Controller
         $user->update->all();
 
     }
+
+    public function deleteProduct($id)
+
+    {
+        if (\Auth::guest())
+        {
+            return redirect('auth/login');
+        }
+        customer_item::where('customer_id', '=', \Auth::user()->id)->AND('id', '=', $id)->delete($id);
+        return redirect('cart');
+    }
+
+
+    public function deleteAllCustomerItem()
+
+    {
+        if (\Auth::guest())
+        {
+            return redirect('auth/login');
+        }
+        customer_item::where('customer_id', '=', \Auth::user()->id)->delete();
+        return redirect('/');
+    }
+
+
 
 }

@@ -113,8 +113,6 @@
                             <ul class="nav" >
                                 <li><a class="home active" href="{{url('/')}}">Accueil</a>
                                 </li>
-                                <li><a class="myaccount" href="account">Mon Compte</a>
-                                </li>
                                 <li><a class="shoppingcart" href="cart">Panier</a>
                                 </li>
                                 <li><a class="{{url('auth/logout')}}" href="{{url('auth/logout')}}">Se Déconnecter</a>
@@ -123,7 +121,7 @@
                                 <li class="dropdown hover">
                                     <a href="#" class="dropdown-toggle" data-toggle="">{{Auth::user()->name}} <b class="caret"></b></a>
                                     <ul class="dropdown-menu ">
-                                        <li><a href="#">Se Déconnecter</a>
+                                        <li><a class="myaccount" href="#">Se Déconnecter</a>
                                         </li>
 
 

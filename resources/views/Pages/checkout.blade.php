@@ -18,24 +18,28 @@
         <div class="span9">
 
           {!! Form::Open(['url' => 'paid']) !!}
-          <div class="checkoutsteptitle">Step 5: Confirm Order<a class="modify">Modify</a>
+          <div class="checkoutsteptitle"> Confirm Order<a class="modify">Modify</a>
           </div>
           <div class="checkoutstep">
             <div class="cart-info">
               <table class="table table-striped table-bordered">
                 <tr>
                   <th class="name">Product Name</th>
+                  <th class="price">Unit QTY</th>
                   <th class="price">Unit Price</th>
                   <th class="total">Action</th>
                 </tr>
 
 
-                <?php $total = 0; ?>
+                <?php $total = 0; $subtotal = 0; ?>
                 @foreach($shoppingCarts as $items)
-                  <?php $total += $items->product_price; ?>
+                  <?php $subtotal = $items->product_price * $items->product_qty; ?>
+                  <?php $total += $subtotal; ?>
                   <tr>
 
                     <td  class="name"><a href="#">{{ $items->product_name }}</a></td>
+
+                    <td class="qty">{{ $items->product_qty }}</td>
 
                     <td class="price">{{ $items->product_price }}</td>
 
@@ -58,9 +62,10 @@
                       </tr>
                     </tbody>
                   </table>
-                  <ul class="productpagecart">
+                  <ul  class="productpagecart">
                     <script
-                            data-callback="http://www.facebook.com"
+                            data-env="sandbox"
+                            data-callback="{{url('removecart/clearuser')}}"
                             data-currency="EUR"
                             data-amount="{{ $total }}"
                             data-name="Product Name"
@@ -80,7 +85,7 @@
     </div>
   </section>
 
-<<<<<<< HEAD
+
 <!-- Footer -->
 @include('Pages.template.basefooter')
 <!-- javascript
@@ -107,4 +112,4 @@
 =======
 @endsection
 
->>>>>>> origin/master
+

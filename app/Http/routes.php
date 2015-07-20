@@ -46,14 +46,22 @@ Route::get('view-customers', 'adminController@cart_customers');
 
 // Product Management
 
-Route::get('category','ProductController@category');
+
 Route::get('/','ProductController@index');
 Route::post('view','ProductController@store');
 Route::get('cart','ProductController@cart');
 Route::post('AddToCart','ProductController@AddToCart');
 Route::post('paid','ProductController@getUserDetails');
 Route::get('checkout','ProductController@checkout');
+
+Route::get('removecart/clearuser','ProductController@deleteAllCustomerItem');
+Route::get('category','ProductController@allcategory');
+
+Route::get('removecart/{id}','ProductController@deleteProduct');
+
 Route::get('view/{id}','ProductController@show');
+Route::get('category/{id}','ProductController@categorywise');
+
 
 
 

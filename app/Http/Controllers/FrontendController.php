@@ -26,4 +26,6 @@ class FrontendController extends Controller
     public function admin(){
         return view('backoffice.dashboard');
     }
+
+
 }

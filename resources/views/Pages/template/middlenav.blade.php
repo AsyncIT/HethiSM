@@ -1,7 +1,7 @@
 <div class="pull-left">
 
     <a href="{{url('/')}}" class="logo pull-left">
-        <img src="img/logo.png" alt="Herthi Super Market" title="Herthi Super Market"></a>
+        <img src="{{url('img/logo.png')}}" alt="Herthi Super Market" title="Herthi Super Market"></a>
 
 </div>
 

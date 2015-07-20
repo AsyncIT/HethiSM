@@ -1,5 +1,27 @@
 @extends('app')
+<head>
+  <meta charset="utf-8">
+  <title>Herthi Super Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="http://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <link href="../css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/flexslider.css" type="text/css" media="screen" rel="stylesheet"  />
+  <link href="../css/jquery.fancybox.css" rel="stylesheet">
+  <link href="../css/cloud-zoom.css" rel="stylesheet">
 
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!-- fav -->
+  <link rel="shortcut icon" href="assets/ico/favicon.html">
+</head>
 @section('content_section')
 
     <section id="product">
@@ -19,23 +41,10 @@
           <div class="sidewidt">
             <h2 class="heading2"><span>Categories</span></h2>
             <ul class="nav nav-list categories">
-              <li><a href="{{url('category')}}">Legumes</a>
+              @foreach($category as $menu)
+              <li><a href="{{url('category',$menu->category)}}">{{$menu->category}}</a>
               </li>
-              <li><a href="{{url('category')}}">Cr�merie</a>
-              </li>
-              <li><a href="{{url('category')}}"> Surgel�s</a>
-              </li>
-              <li><a href="{{url('category')}}">Monde De B�b�
-                </a>
-              </li>
-              <li><a href="{{url('category')}}">Boissons Alcoolis�es </a>
-              </li>
-              <li><a href="{{url('category')}}">T�l�phone
-                </a>
-              </li>
-              <li><a href="{{url('category')}}">Ordinateurs Portable
-                </a>
-              </li>
+              @endforeach
             </ul>
           </div>
 
