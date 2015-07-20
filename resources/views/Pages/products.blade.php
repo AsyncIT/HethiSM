@@ -1,4 +1,4 @@
-@extends('app')
+﻿@extends('app')
 <head>
   <meta charset="utf-8">
   <title>Herthi Super Market</title>

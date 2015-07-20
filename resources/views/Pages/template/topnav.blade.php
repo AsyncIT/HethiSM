@@ -6,10 +6,6 @@
             <div class="span12">
 
 
-
-
-
-
                     <div class="pull-left">
                         <div class="navbar">
 
@@ -34,12 +30,7 @@
                             </ul>
                         </div>
 
-
-
                     </div>
-
-
-
 
 
 

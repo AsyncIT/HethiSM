@@ -9,7 +9,7 @@
     <div class="span8">
       @include('Pages.template.slider')
     </div>
-    <div class="span4">
+    <div class="span4 hidden-phone">
       <img src="img/sliders/banner_01_5.jpg" alt="" />
     </div>
     </div>
@@ -18,7 +18,7 @@
 
   <!-- Section Start-->
   <!-- Section  Banner Start-->
-  <section class="container smbanner">
+  <section class="container smbanner hidden-phone">
     <div class="row">
       <div class="span3"><a href="#"><img src="img/sliders/banner_01_1.png" alt="" title=""></a>
       </div>
@@ -33,7 +33,7 @@
   <!-- Section  End-->
 
   <!-- Section  Banner Start-->
-  <section class="container smbanner">
+  <section class="container smbanner hidden-phone">
     <div class="row">
       <div class="span3"><a href="#"><img src="img/sliders/banner_05_1.png" alt="" title=""></a>
       </div>
@@ -63,7 +63,7 @@
           <a class="prdocutname" href="{{url('view',$product->id)}}">{{$product->product_name}}</a>
           <div class="thumbnail">
 
-            <a href="{{url('view',$product->id)}}"><img alt="" src="{{url('view',$product->image)}}"></a>
+            <a href="{{url('view',$product->id)}}"><img alt="" src="{{url($product->image)}}"></a>
 
             <div class="pricetag">
               <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">AJOUTER AU PANIER</a>
@@ -91,7 +91,7 @@
             <a class="prdocutname" href="{{url('view',$product->id)}}">{{$product->product_name}}</a>
             <div class="thumbnail">
 
-              <a href="{{url('view',$product->id)}}"><img alt="" src="{{$product->image1}}"></a>
+              <a href="{{url('view',$product->id)}}"><img alt="" src="{{url($product->image)}}"></a>
 
               <div class="pricetag">
                 <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">AJOUTER AU PANIER</a>
@@ -106,13 +106,10 @@
       </ul>
     </div>
   </section>
-
+    9
   <!-- Section  Banner Start-->
-
   <!-- Section  End-->
-
  <!-- Brand Names -->
-
 <!-- Brand Names -->
 
 @endsection

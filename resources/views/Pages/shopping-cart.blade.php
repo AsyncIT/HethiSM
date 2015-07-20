@@ -1,4 +1,4 @@
-@extends('app')
+﻿@extends('app')
 
 @section('content_section')
 
@@ -19,7 +19,7 @@
         <table class="table table-striped table-bordered">
           <tr>
               <th class="name">Nom du produit</th>
-              <th class="price">quantit�</th>
+              <th class="price">quantité</th>
               <th class="price">Prix Unitaire</th>
               <th class="total">supprimer</th>
 
