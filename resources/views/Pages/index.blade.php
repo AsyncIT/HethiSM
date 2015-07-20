@@ -63,7 +63,7 @@
           <a class="prdocutname" href="{{url('view',$product->id)}}">{{$product->product_name}}</a>
           <div class="thumbnail">
 
-            <a href="{{url('view',$product->id)}}"><img alt="" src="{{url($product->image)}}"></a>
+            <a href="{{url('view',$product->id)}}"><img alt="" src="{{url($product->image1)}}"></a>
 
             <div class="pricetag">
               <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">AJOUTER AU PANIER</a>
@@ -91,7 +91,7 @@
             <a class="prdocutname" href="{{url('view',$product->id)}}">{{$product->product_name}}</a>
             <div class="thumbnail">
 
-              <a href="{{url('view',$product->id)}}"><img alt="" src="{{url($product->image)}}"></a>
+              <a href="{{url('view',$product->id)}}"><img alt="" src="{{url($product->image1)}}"></a>
 
               <div class="pricetag">
                 <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">AJOUTER AU PANIER</a>
