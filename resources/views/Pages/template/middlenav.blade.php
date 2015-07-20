@@ -8,9 +8,6 @@
 
 <div class="headerdetails">
 
-
-
-
     <div class="pull-right">
         <ul class="nav topcart pull-left">
             <li class="dropdown hover carticon ">

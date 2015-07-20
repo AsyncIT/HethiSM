@@ -87,10 +87,11 @@ class ProductController extends Controller
     {
 
         $input = Request::all();
+
         customer_item::create($input);
         return  redirect(url('cart'));
 
-       // return view('Pages.shopping-cart');
+
     }
 
     public function checkout()
