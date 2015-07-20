@@ -43,7 +43,7 @@
 
                     <td class="price">{{ $items->product_price }}</td>
 
-                    <td class="total"> <a href="#"><img class="tooltip-test" data-original-title="Remove"  src="img/remove.png" alt=""></a></td>
+                    <td class="total"> <a href="{{url('removecart',$items->id)}}"><img class="tooltip-test" data-original-title="Remove"  src="img/remove.png" alt=""></a></td>
 
                   </tr>
                 @endforeach
