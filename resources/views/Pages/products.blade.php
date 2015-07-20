@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
   <link href="http://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
@@ -14,6 +16,7 @@
   <link href="../css/flexslider.css" type="text/css" media="screen" rel="stylesheet"  />
   <link href="../css/jquery.fancybox.css" rel="stylesheet">
   <link href="../css/cloud-zoom.css" rel="stylesheet">
+
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -39,7 +42,7 @@
         <aside class="span3">
          <!-- Category-->
           <div class="sidewidt">
-            <h2 class="heading2"><span>Categories</span></h2>
+            <h2 class="heading2"><span>Catégories</span></h2>
             <ul class="nav nav-list categories">
               @foreach($category as $menu)
               <li><a href="{{url('category',$menu->category)}}">{{$menu->category}}</a>
@@ -108,7 +111,7 @@
                               <br>
                              </div>
                             <div class="pricetag">
-                              <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">ADD TO CART</a>
+                              <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">AJOUTER AU PANIER</a>
                               <div class="price">
                                 <div class="pricenew">{{$product->price}}&euro;</div>
                                 <div class="priceold">{{$product->promo_price}}&euro;</div>
