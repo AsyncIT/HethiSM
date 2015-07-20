@@ -17,17 +17,119 @@
 
         <div class="span9">
 
+
           {!! Form::Open(['url' => 'paid']) !!}
-          <div class="checkoutsteptitle"> Confirm Order<a class="modify">Modify</a>
+          <div class="checkoutsteptitle">Step 1: Billing Details<a class="modify">Modify</a>
+          </div>
+          <div class="checkoutstep">
+            <div class="row">
+              <form class="form-horizontal">
+                <fieldset>
+                  <div class="span4">
+                    <div class="control-group">
+                      <label class="control-label" >First Name<span class="red">*</span></label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" >Last Name<span class="red">*</span></label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+
+                    <div class="control-group">
+                      <label class="control-label" >Telephone<span class="red">*</span></label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" >Telephone<span class="red">*</span></label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" >Country<span class="red">*</span></label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" >Region<span class="red">*</span></label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="span4">
+                    <div class="control-group">
+                      <label class="control-label" >Company</label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+
+
+
+                    <div class="control-group">
+                      <label class="control-label" >Company Id</label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" >Address 1<span class="red">*</span></label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" >Address 2</label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" >City<span class="red">*</span></label>
+                      <div class="controls">
+                        <input type="text" class=""  value="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" >Post Code<span class="red">*</span></label>
+                      <div class="controls">
+                        <input type="text" class=""  value="" required="">
+                      </div>
+                    </div>
+
+
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <a class="btn btn-orange pull-right">Continue</a>
+            {{FORM::submit('submit')}}
+          </div>
+
+
+
+
+
+
+          <div class="checkoutsteptitle"> confirmer La Commande<a class="modify">modifier</a>
           </div>
           <div class="checkoutstep">
             <div class="cart-info">
               <table class="table table-striped table-bordered">
                 <tr>
-                  <th class="name">Product Name</th>
-                  <th class="price">Unit QTY</th>
-                  <th class="price">Unit Price</th>
-                  <th class="total">Action</th>
+                  <th class="name">Nom du produit</th>
+                  <th class="price">quantité</th>
+                  <th class="price">Prix Unitaire</th>
+                  <th class="total">supprimer</th>
                 </tr>
 
 

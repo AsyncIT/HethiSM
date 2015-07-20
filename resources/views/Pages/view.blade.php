@@ -49,7 +49,7 @@
       <div class="pull-right">
         <ul class="nav topcart pull-left">
           <li class="dropdown hover carticon ">
-            <a href="#" class="dropdown-toggle" > Shopping Cart <span class="label label-orange font14">No item(s)</span> - $00.00 <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" > Panier <span class="label label-orange font14">Aucun article(s)</span> - $00.00 <b class="caret"></b></a>
             <ul class="dropdown-menu topcartopen ">
               <li>
 
@@ -101,8 +101,8 @@
               <h1 class="productname"><span class="bgnone">{{$products->product_name}}</span></h1>
               <div class="productprice">
                 <div class="productpageprice">
-                  <span class="spiral"></span>{{$products->price}}€</div>
-                <div class="productpageoldprice">{{$products->promo_price}}€</div>
+                  <span class="spiral"></span>{{$products->price}}&euro;</div>
+                <div class="productpageoldprice">{{$products->promo_price}}&euro;</div>
 
                 <ul class="rate">
                   <li class="on"></li>
@@ -120,7 +120,7 @@
 
               <p><h3>{{$products->product_description}}</h3></p>
               <ul class="productpagecart">
-                {!! Form::submit('Add To Cart', ['class' => 'btn btn-orange']) !!}
+                {!! Form::submit('AJOUTER AU PANIER', ['class' => 'btn btn-orange']) !!}
               </ul>
 
               @unless (\Auth::guest())

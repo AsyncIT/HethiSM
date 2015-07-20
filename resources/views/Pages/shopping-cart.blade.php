@@ -7,21 +7,21 @@
      <!--  breadcrumb --> 
       <ul class="breadcrumb">
         <li>
-          <a href="#">Home</a>
+          <a href="#">Accueil</a>
           <span class="divider">/</span>
         </li>
-        <li class="active"> Shopping Cart</li>
+        <li class="active"> Panier</li>
       </ul>       
-      <h1 class="heading1"><span class="maintext"> Shopping Cart</span><span class="subtext"> All items in your  Shopping Cart</span></h1>
+      <h1 class="heading1"><span class="maintext"> Panier</span><span class="subtext">Tous les articles dans votre panier</span></h1>
       <!-- Cart-->
       <div class="cart-info">
 
         <table class="table table-striped table-bordered">
           <tr>
-             <th class="name">Product Name</th>
-              <th class="price">Unit Qty</th>
-            <th class="price">Unit Price</th>
-             <th class="total">Action</th>
+              <th class="name">Nom du produit</th>
+              <th class="price">quantité</th>
+              <th class="price">Prix Unitaire</th>
+              <th class="total">supprimer</th>
 
           </tr>
 

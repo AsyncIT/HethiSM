@@ -4,14 +4,14 @@
             <li><a class="active"  href="{{url('/')}}">Accueil</a>
 
             </li>
-            <li><a href="category">Produits</a>
+            <li><a href="{{url('category')}}">Produits</a>
 
             </li>
 
-            <li><a href="#">Galerie</a>
+            <li><a href="{{url('category')}}">Galerie</a>
             </li>
 
-            <li><a href="contact">Nous Contactez</a>
+            <li><a href="{{url('contact')}}">Nous Contactez</a>
             </li>
         </ul>
     </nav>

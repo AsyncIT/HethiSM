@@ -48,7 +48,7 @@ class ProductController extends Controller
     {
         $products = product::where('product_category', '=', $id)->get(); // get all product
         $category = category::get();
-        return view('Pages.products',compact('products','category')); // return products to index page
+        return view('Pages.products',compact('products','category','id')); // return products to index page
 
     }
 
@@ -58,7 +58,8 @@ class ProductController extends Controller
     {
         $products = product::get(); // get all product
         $category = category::get();
-        return view('Pages.products',compact('products','category')); // return products to index page
+        $id = "All Products";
+        return view('Pages.products',compact('products','category','id')); // return products to index page
 
     }
 

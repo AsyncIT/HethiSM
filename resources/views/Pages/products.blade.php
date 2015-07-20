@@ -28,11 +28,11 @@
     <div class="container">
      <!--  breadcrumb -->  
       <ul class="breadcrumb">
-        <li>
-          <a href="#">Home</a>
-          <span class="divider">/</span>
-        </li>
-        <li class="active">Category</li>
+        <li><a href="#">Home</a> <span class="divider">/</span></li>
+        <li class="active">Category <span class="divider">/</span> </li>
+
+        <li class="active"> {{$id}} </li>
+
       </ul>
       <div class="row">
         <!-- Sidebar Start-->
@@ -59,23 +59,8 @@
                <!-- Sorting-->
                 <div class="sorting well">
                   <form class=" form-inline pull-left">
-                    Sort By :
-                    <select class="span2">
-                      <option>Default</option>
-                      <option>Name</option>
-                      <option>Pirce</option>
-                      <option>Rating </option>
-                      <option>Color</option>
-                    </select>
-                    &nbsp;&nbsp;
-                    Show:
-                    <select class="span1">
-                      <option>10</option>
-                      <option>15</option>
-                      <option>20</option>
-                      <option>25</option>
-                      <option>30</option>
-                    </select>
+                    <h2 class="heading2"><span>{{$id}}</span></h2>
+
                   </form>
                   <div class="btn-group pull-right">
                     <button class="btn" id="list"><i class="icon-th-list"></i>
@@ -93,12 +78,12 @@
                       <a class="prdocutname" href="{{url('view',$product->id)}}">{{$product->product_name}}</a>
                       <div class="thumbnail">
 
-                        <a href="{{url('view',$product->id)}}"><img alt="" src="{{$product->image1}}"></a>
+                        <a href="{{url('view',$product->id)}}"><img alt="" src="{{url($product->image1)}}"></a>
                         <div class="pricetag">
-                          <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">ADD TO CART</a>
+                          <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">AJOUTER AU PANIER</a>
                           <div class="price">
-                            <div class="pricenew">{{$product->price}}</div>
-                            <div class="priceold">{{$product->promo_price}}</div>
+                            <div class="pricenew">{{$product->price}}&euro;</div>
+                            <div class="priceold">{{$product->promo_price}}&euro;</div>
                           </div>
                         </div>
                       </div>
@@ -125,8 +110,8 @@
                             <div class="pricetag">
                               <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">ADD TO CART</a>
                               <div class="price">
-                                <div class="pricenew">{{$product->price}}</div>
-                                <div class="priceold">{{$product->promo_price}}</div>
+                                <div class="pricenew">{{$product->price}}&euro;</div>
+                                <div class="priceold">{{$product->promo_price}}&euro;</div>
                               </div>
                             </div>
 
