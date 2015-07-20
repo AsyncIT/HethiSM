@@ -10,7 +10,7 @@
       @include('Pages.template.slider')
     </div>
     <div class="span4 hidden-phone">
-      <img src="img/sliders/banner_01_5.jpg" alt="" />
+      <img src="img/sliders/banner_01_5.jpg" style="margin-left: 15%;" alt="" />
     </div>
     </div>
   </div>

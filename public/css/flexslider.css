@@ -11,7 +11,7 @@
 
  
 /* Browser Resets */
-#mainslider { border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; width:50%; -o-border-radius:4px }
+#mainslider { border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; width:70%; -o-border-radius:4px }
 .flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus { outline: none; }
 .slides, .flex-control-nav, .flex-direction-nav { margin: 0; padding: 0; list-style: none; }
 /* FlexSlider Necessary Styles
