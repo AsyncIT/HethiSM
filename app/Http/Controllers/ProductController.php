@@ -124,7 +124,7 @@ class ProductController extends Controller
         {
             return redirect('auth/login');
         }
-        customer_item::where('customer_id', '=', \Auth::user()->id)->AND('id', '=', $id)->delete($id);
+        customer_item::where('customer_id', '=', \Auth::user()->id)->where('id', $id)->delete();
         return redirect('cart');
     }
 
