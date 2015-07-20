@@ -9,7 +9,7 @@
           <a href="#">Home</a>
           <span class="divider">/</span>
         </li>
-        <li class="active">Checkout</li>
+        <li class="active">Check-out</li>
       </ul>
       <div class="row">        
         <!-- Account Login-->

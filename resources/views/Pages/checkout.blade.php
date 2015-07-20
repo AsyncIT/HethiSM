@@ -18,7 +18,7 @@
         <div class="span9">
 
           {!! Form::Open(['url' => 'user-details']) !!}
-          <div class="checkoutsteptitle">Step 1: Billing Details<a class="modify">Modify</a>
+          <div class="checkoutsteptitle">Détails De La Facturation<a class="modify">Modify</a>
           </div>
           <div class="checkoutstep">
             <div class="row">
@@ -26,33 +26,33 @@
                 <fieldset>
                   <div class="span4">
                     <div class="control-group">
-                      <label class="control-label" >First Name<span class="red">*</span></label>
+                      <label class="control-label" >Prénom<span class="red">*</span></label>
                       <div class="controls">
                         <input name="first_name" class=""  value="{{ \auth::user()->first_name }}">
                       </div>
                     </div>
                     <div class="control-group">
-                      <label class="control-label" >Last Name<span class="red">*</span></label>
+                      <label class="control-label" >Nom De Famille<span class="red">*</span></label>
                       <div class="controls">
                         <input name="last_name" class=""  value="{{ \auth::user()->last_name }}">
                       </div>
                     </div>
 
                     <div class="control-group">
-                      <label class="control-label" >Telephone<span class="red">*</span></label>
+                      <label class="control-label" >téléphone<span class="red">*</span></label>
                       <div class="controls">
                         <input name="telephone" class=""  value="{{ \auth::user()->telephone }}">
                       </div>
                     </div>
 
                     <div class="control-group">
-                      <label class="control-label" >Country<span class="red">*</span></label>
+                      <label class="control-label" >pays<span class="red">*</span></label>
                       <div class="controls">
                         <input name="country" class=""  value="{{ \auth::user()->country }}">
                       </div>
                     </div>
                     <div class="control-group">
-                      <label class="control-label" >Region<span class="red">*</span></label>
+                      <label class="control-label" >région<span class="red">*</span></label>
                       <div class="controls">
                         <input name="region" class=""  value="{{ \auth::user()->region }}">
                       </div>
@@ -61,7 +61,7 @@
                   </div>
                   <div class="span4">
                     <div class="control-group">
-                      <label class="control-label" >Company</label>
+                      <label class="control-label" >entreprise</label>
                       <div class="controls">
                         <input name="company" class=""  value="{{ \auth::user()->company }}">
                       </div>
@@ -69,25 +69,25 @@
 
 
                     <div class="control-group">
-                      <label class="control-label" >Address 1<span class="red">*</span></label>
+                      <label class="control-label" >adresse 1<span class="red">*</span></label>
                       <div class="controls">
                         <input name="Address1" class=""  value="{{ \auth::user()->Address1 }}">
                       </div>
                     </div>
                     <div class="control-group">
-                      <label class="control-label" >Address 2</label>
+                      <label class="control-label" >adresse 2</label>
                       <div class="controls">
                         <input name="Address2" class=""  value="{{ \auth::user()->Address2 }}">
                       </div>
                     </div>
                     <div class="control-group">
-                      <label class="control-label" >City<span class="red">*</span></label>
+                      <label class="control-label" >ville<span class="red">*</span></label>
                       <div class="controls">
                         <input name="city" class=""  value="{{ \auth::user()->city }}">
                       </div>
                     </div>
                     <div class="control-group">
-                      <label class="control-label" >Post Code<span class="red">*</span></label>
+                      <label class="control-label" >code Postal<span class="red">*</span></label>
                       <div class="controls">
                         <input name="post_code" class=""  value="{{ \auth::user()->post_code }}" required="">
                       </div>
@@ -101,7 +101,7 @@
 
 
           </div>
-          {!! Form::submit('Save Product',['class'=>'btn btn-orange pull-right']) !!}
+          {!! Form::submit('mise à jour',['class'=>'btn btn-orange pull-right']) !!}
 
         </div>
 
