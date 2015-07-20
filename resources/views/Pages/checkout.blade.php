@@ -17,50 +17,44 @@
 
         <div class="span9">
 
-
-          {!! Form::Open(['url' => 'paid']) !!}
+          {!! Form::Open(['url' => 'user-details']) !!}
           <div class="checkoutsteptitle">Step 1: Billing Details<a class="modify">Modify</a>
           </div>
           <div class="checkoutstep">
             <div class="row">
-              <form class="form-horizontal">
+
                 <fieldset>
                   <div class="span4">
                     <div class="control-group">
                       <label class="control-label" >First Name<span class="red">*</span></label>
                       <div class="controls">
-                        <input type="text" class=""  value="">
+                        <input name="first_name" class=""  value="{{ \auth::user()->first_name }}">
                       </div>
                     </div>
                     <div class="control-group">
                       <label class="control-label" >Last Name<span class="red">*</span></label>
                       <div class="controls">
-                        <input type="text" class=""  value="">
+                        <input name="last_name" class=""  value="{{ \auth::user()->last_name }}">
                       </div>
                     </div>
 
                     <div class="control-group">
                       <label class="control-label" >Telephone<span class="red">*</span></label>
                       <div class="controls">
-                        <input type="text" class=""  value="">
+                        <input name="telephone" class=""  value="{{ \auth::user()->telephone }}">
                       </div>
                     </div>
-                    <div class="control-group">
-                      <label class="control-label" >Telephone<span class="red">*</span></label>
-                      <div class="controls">
-                        <input type="text" class=""  value="">
-                      </div>
-                    </div>
+
                     <div class="control-group">
                       <label class="control-label" >Country<span class="red">*</span></label>
                       <div class="controls">
-                        <input type="text" class=""  value="">
+                        <input name="country" class=""  value="{{ \auth::user()->country }}">
                       </div>
                     </div>
                     <div class="control-group">
                       <label class="control-label" >Region<span class="red">*</span></label>
                       <div class="controls">
-                        <input type="text" class=""  value="">
+                        <input name="region" class=""  value="{{ \auth::user()->region }}">
                       </div>
                     </div>
 
@@ -69,117 +63,46 @@
                     <div class="control-group">
                       <label class="control-label" >Company</label>
                       <div class="controls">
-                        <input type="text" class=""  value="">
+                        <input name="company" class=""  value="{{ \auth::user()->company }}">
                       </div>
                     </div>
 
 
-
-                    <div class="control-group">
-                      <label class="control-label" >Company Id</label>
-                      <div class="controls">
-                        <input type="text" class=""  value="">
-                      </div>
-                    </div>
                     <div class="control-group">
                       <label class="control-label" >Address 1<span class="red">*</span></label>
                       <div class="controls">
-                        <input type="text" class=""  value="">
+                        <input name="Address1" class=""  value="{{ \auth::user()->Address1 }}">
                       </div>
                     </div>
                     <div class="control-group">
                       <label class="control-label" >Address 2</label>
                       <div class="controls">
-                        <input type="text" class=""  value="">
+                        <input name="Address2" class=""  value="{{ \auth::user()->Address2 }}">
                       </div>
                     </div>
                     <div class="control-group">
                       <label class="control-label" >City<span class="red">*</span></label>
                       <div class="controls">
-                        <input type="text" class=""  value="">
+                        <input name="city" class=""  value="{{ \auth::user()->city }}">
                       </div>
                     </div>
                     <div class="control-group">
                       <label class="control-label" >Post Code<span class="red">*</span></label>
                       <div class="controls">
-                        <input type="text" class=""  value="" required="">
+                        <input name="post_code" class=""  value="{{ \auth::user()->post_code }}" required="">
                       </div>
                     </div>
 
 
                   </div>
                 </fieldset>
-              </form>
+
             </div>
-            <a class="btn btn-orange pull-right">Continue</a>
-            {{FORM::submit('submit')}}
+
+
           </div>
+          {!! Form::submit('Save Product',['class'=>'btn btn-orange pull-right']) !!}
 
-
-
-
-
-
-          <div class="checkoutsteptitle"> confirmer La Commande<a class="modify">modifier</a>
-          </div>
-          <div class="checkoutstep">
-            <div class="cart-info">
-              <table class="table table-striped table-bordered">
-                <tr>
-                  <th class="name">Nom du produit</th>
-                  <th class="price">quantité</th>
-                  <th class="price">Prix Unitaire</th>
-                  <th class="total">supprimer</th>
-                </tr>
-
-
-                <?php $total = 0; $subtotal = 0; ?>
-                @foreach($shoppingCarts as $items)
-                  <?php $subtotal = $items->product_price * $items->product_qty; ?>
-                  <?php $total += $subtotal; ?>
-                  <tr>
-
-                    <td  class="name"><a href="#">{{ $items->product_name }}</a></td>
-
-                    <td class="qty">{{ $items->product_qty }}</td>
-
-                    <td class="price">{{ $items->product_price }}</td>
-
-                    <td class="total"> <a href="{{url('removecart',$items->id)}}"><img class="tooltip-test" data-original-title="Remove"  src="img/remove.png" alt=""></a></td>
-
-                  </tr>
-                @endforeach
-
-              </table>
-            </div>
-            <div class="row">
-              <div class="pull-right">
-                <div class="span4 pull-right">
-                  <table class="table table-striped table-bordered ">
-                    <tbody>
-                      <tr>
-
-                        <td><span class="extra bold totalamout">Total :</span></td>
-                        <td><span class="bold totalamout">{{ $total }}</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <ul  class="productpagecart">
-                    <script
-                            data-env="sandbox"
-                            data-callback="{{url('removecart/clearuser')}}"
-                            data-currency="EUR"
-                            data-amount="{{ $total }}"
-                            data-name="Product Name"
-                            data-button="buynow" src="{{url('js/paypal-button.min.js')}}?merchant=ruwanranganathz@gmail.com" async="async"
-                            ></script>
-                  </ul>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          {!! Form::close() !!}
         </div>
 
 
@@ -188,8 +111,7 @@
   </section>
 
 
-<!-- Footer -->
-@include('Pages.template.basefooter')
+
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -209,9 +131,6 @@
 <script type="text/javascript"  src="js/jquery.ba-throttle-debounce.min.js"></script>
 <script type="text/javascript"  src="js/paypal-button.min.js"></script>
 <script defer src="js/custom.js"></script>
-</body>
-</html>
-=======
 @endsection
 
 
