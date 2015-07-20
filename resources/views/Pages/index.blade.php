@@ -63,7 +63,7 @@
           <a class="prdocutname" href="{{url('view',$product->id)}}">{{$product->product_name}}</a>
           <div class="thumbnail">
 
-            <a href="{{url('view',$product->id)}}"><img alt="" src="{{$product->image1}}"></a>
+            <a href="{{url('view',$product->id)}}"><img alt="" src="{{url('view',$product->image)}}"></a>
 
             <div class="pricetag">
               <span class="spiral"></span><a href="{{url('view',$product->id)}}" class="productcart">AJOUTER AU PANIER</a>
