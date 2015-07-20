@@ -11,6 +11,6 @@ class customer_item extends Model
         'product_id',
         'product_name',
         'product_price',
-        'product_description',
+        'product_qty',
     ];
 }

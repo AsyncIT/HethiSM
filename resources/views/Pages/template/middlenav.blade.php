@@ -14,12 +14,8 @@
     <div class="pull-right">
         <ul class="nav topcart pull-left">
             <li class="dropdown hover carticon ">
-                <a href="#" class="dropdown-toggle" > Shopping Cart <span class="label label-orange font14">No item(s)</span> - $00.00 <b class="caret"></b></a>
-                <ul class="dropdown-menu topcartopen ">
-                    <li>
+                <a href="{{url('cart')}}" class="dropdown-toggle" > Shopping Cart <span class="label label-orange font14">View item(s)</span> <b class="caret"></b></a>
 
-                    </li>
-                </ul>
             </li>
         </ul>
     </div>
