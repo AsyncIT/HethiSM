@@ -1,4 +1,4 @@
-@extends('app')
+ï»¿@extends('app')
 
 @section('content_section')
   <section id="product">
@@ -18,7 +18,7 @@
         <div class="span9">
 
           {!! Form::Open(['url' => 'user-details']) !!}
-          <div class="checkoutsteptitle">Détails De La Facturation<a class="modify">Modify</a>
+          <div class="checkoutsteptitle">DÃ©tails De La Facturation<a class="modify">Modify</a>
           </div>
           <div class="checkoutstep">
             <div class="row">
@@ -26,7 +26,7 @@
                 <fieldset>
                   <div class="span4">
                     <div class="control-group">
-                      <label class="control-label" >Prénom<span class="red">*</span></label>
+                      <label class="control-label" >PrÃ©nom<span class="red">*</span></label>
                       <div class="controls">
                         <input name="first_name" class=""  value="{{ \auth::user()->first_name }}">
                       </div>
@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="control-group">
-                      <label class="control-label" >téléphone<span class="red">*</span></label>
+                      <label class="control-label" >tÃ©lÃ©phone<span class="red">*</span></label>
                       <div class="controls">
                         <input name="telephone" class=""  value="{{ \auth::user()->telephone }}">
                       </div>
@@ -52,7 +52,7 @@
                       </div>
                     </div>
                     <div class="control-group">
-                      <label class="control-label" >région<span class="red">*</span></label>
+                      <label class="control-label" >rÃ©gion<span class="red">*</span></label>
                       <div class="controls">
                         <input name="region" class=""  value="{{ \auth::user()->region }}">
                       </div>
@@ -101,7 +101,7 @@
 
 
           </div>
-          {!! Form::submit('mise à jour',['class'=>'btn btn-orange pull-right']) !!}
+          {!! Form::submit('mise Ã  jour',['class'=>'btn btn-orange pull-right']) !!}
 
         </div>
 

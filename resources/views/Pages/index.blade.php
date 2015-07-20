@@ -1,4 +1,4 @@
-@extends('app')
+ï»¿@extends('app')
 <meta charset="UTF-8">
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
 
@@ -53,7 +53,7 @@
   <!-- Featured Product-->
   <section id="featured" class="row mt40">
     <div class="container">
-      <h1 class="heading1"><span class="maintext">Produits Présentés</span><span class="subtext"> Voir nos produits les plus en vedette</span></h1>
+      <h1 class="heading1"><span class="maintext">Produits PrÃ©sentÃ©s</span><span class="subtext"> Voir nos produits les plus en vedette</span></h1>
       <ul class="thumbnails">
 
 
