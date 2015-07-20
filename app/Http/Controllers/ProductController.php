@@ -72,7 +72,7 @@ class ProductController extends Controller
         }
 
 
-        $shoppingCarts =customer_item::where('customer_id', '=', \Auth::user()->id)->get(); // get all selected shopping cart product from customer_items table
+        $shoppingCarts =customer_item::where('customer_id', '=', \Auth::user()->id)->where('status', '=', '0')->get(); // get all selected shopping cart product from customer_items table
 
         return view('Pages.shopping-cart',compact('shoppingCarts')); // return products to index page
 
@@ -114,8 +114,14 @@ class ProductController extends Controller
     public function getUserDetails()
     {
 
-        $user = User::findorFail(\Auth::user()->id);
-        $user->update->all();
+        if (\Auth::guest())
+        {
+            return redirect('auth/login');
+        }
+
+        $input = Request::all();
+        User::WHERE('id','=', \Auth::user()->id)->update($input);
+        return  redirect(url('payment'));
 
     }
 
@@ -138,8 +144,15 @@ class ProductController extends Controller
         {
             return redirect('auth/login');
         }
-        customer_item::where('customer_id', '=', \Auth::user()->id)->delete();
+        customer_item::where('customer_id', '=', \Auth::user()->id)->update(array('status' => 1));
         return redirect('/');
+    }
+
+    public function payment()
+    {
+        $shoppingCarts =customer_item::where('customer_id', '=', \Auth::user()->id)->get(); // get all selected shopping cart product from customer_items table
+
+        return view('Pages.payment',compact('shoppingCarts'));
     }
 
 

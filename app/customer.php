@@ -17,7 +17,6 @@ class customer extends Model
         'post_code',
         'country',
         'region',
-        'email',
-        'password',
+
     ];
 }

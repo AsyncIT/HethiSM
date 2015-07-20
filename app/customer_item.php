@@ -12,5 +12,6 @@ class customer_item extends Model
         'product_name',
         'product_price',
         'product_qty',
+        'status',
     ];
 }

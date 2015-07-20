@@ -123,14 +123,16 @@
                 {!! Form::submit('AJOUTER AU PANIER', ['class' => 'btn btn-orange']) !!}
               </ul>
 
-              @unless (\Auth::guest())
+              @if (\Auth::user())
 
               <input type="text" class="hidden" name="customer_id" value='{{Auth::user()->id}}'>
               <input type="text" class="hidden" name="product_id" value='{{$products->id}}'>
               <input type="text" class="hidden" name="product_name" value="{{$products->product_name}}">
               <input type="text" class="hidden" name="product_price" value="{{$products->price}}">
+                <input type="text" class="hidden" name="product_price" value="{{$products->price}}">
+                <input type="text" class="hidden" name="status" value="0">
              
-                @endunless
+                @endif
          <!-- Product Description tab & comments-->
 
             </div>

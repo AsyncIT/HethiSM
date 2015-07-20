@@ -19,6 +19,7 @@ class CreateCustomerItemsTable extends Migration
             $table->string('product_name');
             $table->double('product_price');
             $table->integer('product_qty');
+            $table->integer('status');
             $table->timestamps();
         });
     }

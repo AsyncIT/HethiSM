@@ -51,7 +51,11 @@ Route::get('/','ProductController@index');
 Route::post('view','ProductController@store');
 Route::get('cart','ProductController@cart');
 Route::post('AddToCart','ProductController@AddToCart');
-Route::post('paid','ProductController@getUserDetails');
+
+Route::post('user-details','ProductController@getUserDetails');
+
+Route::get('payment','ProductController@payment');
+
 Route::get('checkout','ProductController@checkout');
 
 Route::get('removecart/clearuser','ProductController@deleteAllCustomerItem');
