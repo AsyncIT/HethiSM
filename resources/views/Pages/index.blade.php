@@ -54,7 +54,7 @@
     <!-- Featured Product-->
     <section id="featured" class="row mt40">
         <div class="container">
-            <h1 class="heading1"><span class="maintext">Produits Pr�sent�s</span><span class="subtext"> Voir nos produits les plus en vedette</span></h1>
+            <h1 class="heading1"><span class="maintext">Produits Présentés</span><span class="subtext"> Voir nos produits les plus en vedette</span></h1>
             <ul class="thumbnails">
 
 
