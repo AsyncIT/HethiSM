@@ -16,6 +16,7 @@
 
 Route::get('about', ['middleware' => 'auth', 'uses' => 'FrontendController@about']);
 Route::get('contact', 'FrontendController@contact');
+Route::get('gallery', 'FrontendController@gallery');
 
 
 Route::controllers([

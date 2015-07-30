@@ -19,12 +19,8 @@ class FrontendController extends Controller
     }
 
 
-    public function login(){
-        return view('backoffice.login');
-    }
-
-    public function admin(){
-        return view('backoffice.dashboard');
+    public function gallery(){
+        return view ('Pages.gallery');
     }
 
 

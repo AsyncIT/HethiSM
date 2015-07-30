@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -47,16 +47,16 @@
           <a href="#">Accueil</a>
           <span class="divider">/</span>
         </li>
-        <li class="active">Créer Un Compte</li>
+        <li class="active">CrÃ©er Un Compte</li>
       </ul>
       <div class="row">        
         <!-- Register Account-->
         <div class="span9">
-          <h1 class="heading1"><span class="maintext">Créer Un Compte</span><span class="subtext">Créer un compte avec nous</span></h1>
+          <h1 class="heading1"><span class="maintext">CrÃ©er Un Compte</span><span class="subtext">CrÃ©er un compte avec nous</span></h1>
 
           @if (count($errors) > 0)
             <div class="alert alert-danger">
-              <strong>Whoops!</strong> Il y avait quelques problèmes avec votre entrée.<br><br>
+              <strong>Whoops!</strong> Il y avait quelques problÃ¨mes avec votre entrÃ©e.<br><br>
               <ul>
                 @foreach ($errors->all() as $error)
                   <li>{{ $error }}</li>
@@ -100,7 +100,7 @@
 
 
             <div class="pull-left">
-              J'ai lu et accepté les <a href="#" >Politique de confidentialité</a>
+              J'ai lu et acceptÃ© les <a href="#" >Politique de confidentialitÃ©</a>
               &nbsp;
               <button type="submit" class="btn btn-orange">
                 Inscription

@@ -24,7 +24,7 @@
           <form class="form-horizontal contactform"  method="post">
             <fieldset>
               <div class="control-group">
-                <label for="name" class="control-label">Nom Et Pr�nom: <span class="required">*</span></label>
+                <label for="name" class="control-label">Nom Et Prenom: <span class="required">*</span></label>
                 <div class="controls">
                   <input type="text"  class="required" id="name" value="" name="name">
                 </div>

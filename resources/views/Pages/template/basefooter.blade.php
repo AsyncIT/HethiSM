@@ -1,4 +1,4 @@
-<footer id="footer">
+ï»¿<footer id="footer">
     <section class="footersocial">
         <div class="container">
             <div class="row">
@@ -17,6 +17,18 @@
                     </ul>
                 </div>
 
+
+                <div class="span3 contact">
+                    <h2>Contactez Nous</h2>
+                    <ul>
+                         Herthi <br/>
+                        31 Rue d'Anjou,<br/>
+                         France<br/>
+
+
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -27,7 +39,7 @@
                 <div class="span6"> All right reservered . </div>
                 <div class="span6 textright">
 
-                    Herthi Supermarché   © 2015  Verson 2.1
+                    Herthi SupermarchÃ©   Â© 2015  Verson 2.1
                 </div>
             </div>
         </div>

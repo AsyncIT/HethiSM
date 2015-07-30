@@ -21,7 +21,7 @@
             <a class="active"  href="{{url('/')}}">Accueil</a>
         </li>
         <li><a href="{{url('category')}}">Produits</a></li>
-        <li><a href="{{url('category')}}">Galerie</a></li>
+        <li><a href="{{url('gallery')}}">Galerie</a></li>
         <li><a href="{{url('contact')}}">Nous Contactez</a></li>
     </ul>
 
